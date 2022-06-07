@@ -9,16 +9,16 @@
         {{ .ReadingTime }} minute read
       </span>
     </div>
-    {{ with .Params.cover }}
-      {{ $image := $.Page.Resources.GetMatch .src }}
+    {{ with .Params.images }}
+      {{ $image := $.Page.Resources.GetMatch (index . 0) }}
       <figure>
         <img
           src="{{ ($image.Resize "x550 webp q100").RelPermalink }}"
-          alt="{{ cond (isset . "caption") .caption $.Page.Title }}"
+          alt="{{ cond (isset $.Page.Params "cover_caption") $.Page.Params.cover_caption $.Page.Title }}"
           loading="lazy"
           class="shadow-lg"
         />
-        {{ with .caption }}
+        {{ with $.Page.Params.cover_caption }}
           <figcaption class="text-sm italic">
             {{ . | $.Page.RenderString }}
           </figcaption>

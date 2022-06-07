@@ -2,9 +2,9 @@
 author: Christian Engel
 title: A second Post
 date: 2019-05-14
-cover: 
-  src: "images/randy-tarampi-U2eUlPEKIgU-unsplash.jpg"
-  caption: Randy Tarampi
+images: 
+  - "images/randy-tarampi-U2eUlPEKIgU-unsplash.jpg"
+cover_caption: Randy Tarampi
 ---
 
 The quick, brown fox jumps over a lazy dog.
